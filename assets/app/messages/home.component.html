@@ -1,0 +1,129 @@
+<div id="xyz">
+	<div class="container" id="data">
+	<div class="row">
+		<nav class="head navbar navbar-default">
+  	<div class="container-fluid">
+    	<div class="navbar-header">
+      	<a class="navbar-brand">GYNAECOLOGY</a>
+    	</div>
+  	</div>
+	</nav> 
+	</div>
+</div>
+<div class="main">
+	<div class="container">
+	<div class="row">
+		<div class="main1" *ngIf = " p == 0 || p == 1 || p == 2 || p == 3 || p == 4 ? true : false ">
+		<h3>Dr. Asistant</h3>
+		<h2 *ngIf = " p == 0 || p == 1 || p == 2 || p == 3 || p == 4 ? true : false " class="bot_message"> Welcome Sir</h2>
+	</div>
+	</div>
+</div>
+	<div class="container">
+	<div class="row">
+		<div class="main1" *ngIf = " p == 0 || p == 1 || p == 2 || p == 3 || p == 4 ? true : false ">
+		<h3>Dr. Asistant</h3>
+		<h2 *ngIf = " p == 0 || p == 1 || p == 2 || p == 3 || p == 4 ? true : false " class="bot_message">{{ question[0] }}</h2>
+	</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="main2">
+		<h2 *ngIf = " p == 1 || p == 2 || p == 3 || p == 4 ? true : false " class="user_message">{{ user_message[0] }}</h2>
+	</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="main1" *ngIf = " p == 1 || p == 2 || p == 3 || p == 4 ? true : false ">
+		<h3>Dr. Asistant</h3>
+		<h2 *ngIf = " p == 1 || p == 2 || p == 3 || p == 4 ? true : false " class="bot_message">{{ question[1] }}</h2>
+	</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="main2">
+		<h2 *ngIf = " p == 2 || p == 3 || p == 4  ? true : false " class="user_message">{{ user_message[1] }}</h2>
+	</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="main1" *ngIf = " p == 2 || p == 3 || p == 4  ? true : false ">
+		<h3>Dr. Asistant</h3>
+		<h2 *ngIf = " p == 2 || p == 3 || p == 4  ? true : false " class="bot_message">Please select any symptoms (If any)</h2>
+		<form class="form-horizontal" (ngSubmit)="onSubmit1(f)" #f="ngForm">
+      <div class="form-group">
+				<select *ngIf = " p == 2 || p == 3 || p == 4  ? true : false " class="bot_message1 form-control" name="user_msg" ngModel>
+								<option value="Fever">Fever</option>
+								<option value="Rashes">Rashes</option>
+								<option value="Headache">Headache</option>
+								<option value="None">None</option>
+							</select>
+					</div>
+					<button 
+							type="submit" 
+							class="btn btn-primary"
+							[disabled]="seti1()">Submit</button>
+  		</form>
+		
+	</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="main1" *ngIf = " p == 3 || p == 4  ? true : false ">
+		<h2 class="bot_message">Do you have any media file to attach If any Please upload it</h2>
+	</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="main1" *ngIf = " p == 4 || p == 5  ? true : false ">
+		<h3>Dr. Asistant</h3>
+		<h2 *ngIf = " p == 4 || p == 5 ? true : false " class="bot_message">Wait for a min Dr. Sharma will Available very soon</h2>
+	</div>
+	</div>
+</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="footer" id="data">
+			<form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+						<div class="col-md-2 cam">
+							<i class="akl fas fa-camera"></i>
+						</div>
+						<div class="col-md-8 message">
+							<input type="text" class="in form-control" placeholder="Type your message" name="user_msg" required ngModel>
+						</div>
+						<div class="col-md-1 clip">
+   					<div class="image-upload">
+  				  <label for="file-input">
+       			 <i class="dfg fas fa-paperclip"></i>
+   					 </label>
+
+    				<input id="file-input" type="file"  style="display:none"
+						(change) = "fileUpload($event)" name="user_msg"
+    				ngModel />
+						</div>
+							
+
+						</div>
+						<div class="col-md-1 send">
+							<button 
+							type="submit" 
+							class="bh btn btn-primary"
+							[disabled]="seti()"
+							><i class="bhej fas fa-location-arrow"></i></button>
+						</div>
+					</div>
+  		</form>
+		</div>
+	</div>
+</div>
+
+</div>
